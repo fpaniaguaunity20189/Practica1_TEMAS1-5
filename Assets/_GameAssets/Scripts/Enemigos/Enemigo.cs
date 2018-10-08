@@ -10,10 +10,10 @@ public class Enemigo : MonoBehaviour {
 
     [Header("ATAQUE")]
     [SerializeField] int distanciaDeteccion = 5;
-    [SerializeField] int danyo = 2;//Daño que infringe
+    [SerializeField] protected int danyo = 2;//Daño que infringe
 
     [Header("REFERENCIAS")]
-    [SerializeField] GameObject personaje;
+    [SerializeField] protected GameObject personaje;
 
     //int distanciaExplosion;
     private void Start() {

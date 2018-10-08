@@ -9,7 +9,7 @@ public class Player : MonoBehaviour {
     [SerializeField] private int vidaActual;
     [SerializeField] private int vidaMaxima;
     [SerializeField] GameObject[] armas = new GameObject[NUM_ARMAS];
-
+    [SerializeField] TextMesh tm;
     private void Start() {
         /*SOLUCION CUTRE
          armas[0].SetActive(true);
@@ -27,6 +27,8 @@ public class Player : MonoBehaviour {
         ActivarArma(armaActiva);
     }
     private void Update() {
+        tm.text = ""+vidaActual;
+
         if (Input.GetKeyDown(KeyCode.Alpha1)) {
             ActivarArma(0);
         } else if (Input.GetKeyDown(KeyCode.Alpha2)) {
