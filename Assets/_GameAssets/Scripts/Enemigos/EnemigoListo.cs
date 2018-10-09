@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemigoTonto : EnemigoMovil {
-	void Update ()
+public class EnemigoListo : EnemigoMovil {
+    void Update()
     {
         Avanzar();
     }

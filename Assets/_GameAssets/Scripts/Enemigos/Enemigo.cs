@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemigo : MonoBehaviour {
 
     [Header("ESTADO")]
-    [SerializeField] bool estaVivo = true;
+    [SerializeField] protected bool estaVivo = true;
     [SerializeField] int vida = 10;
 
     [Header("ATAQUE")]
@@ -14,6 +14,9 @@ public class Enemigo : MonoBehaviour {
 
     [Header("REFERENCIAS")]
     [SerializeField] protected GameObject personaje;
+
+    [Header("FX")]
+    [SerializeField] protected ParticleSystem psExplosion;
 
     //int distanciaExplosion;
     private void Start() {
@@ -47,6 +50,11 @@ public class Enemigo : MonoBehaviour {
             vida = 0;
             Morir();
         }
+    }
+
+    protected void Destruir()
+    {
+        Destroy(this.gameObject);
     }
 
     /*

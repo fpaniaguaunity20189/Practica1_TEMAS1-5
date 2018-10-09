@@ -38,7 +38,6 @@ public class Player : MonoBehaviour {
         } else if (Input.GetKeyDown(KeyCode.Alpha4)) {
             ActivarArma(3);
         }
-
     }
 
     private void ActivarArma(int armaActiva) {
