@@ -13,6 +13,23 @@ public class EnemigoMovil : Enemigo {
         InvokeRepeating("RotarAleatoriamente", inicioRotacion, tiempoEntreRotacion);
     }
 
+    protected override void Update()
+    {
+        /*
+         * El modificador 'override' indica que el método sobreescribe a un método
+         * equivalente que se encuentra en la clase padre y está declarado como
+         * 'virtual'.
+         * 
+         * En el método que sobreescribe podemos sustituir la funcionalidad del método
+         * del padre o completarla, llamando al mismo método del objeto base.
+         */
+
+        /*
+        Debug.Log("UPDATE DE ENEMIGO MOVIL");
+        base.Update();
+        */
+    }
+
     protected void Avanzar() {
         if (estaVivo)
         {
@@ -28,6 +45,7 @@ public class EnemigoMovil : Enemigo {
     private void OnCollisionEnter(Collision collision)
     {
         RotarAleatoriamente();
+        print(collision.gameObject.tag);
         if (collision.gameObject.name == "Player")
         {
             collision.gameObject.GetComponent<Player>().RecibirDanyo(danyo);

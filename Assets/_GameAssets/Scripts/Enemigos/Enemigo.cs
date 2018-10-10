@@ -18,6 +18,20 @@ public class Enemigo : MonoBehaviour {
     [Header("FX")]
     [SerializeField] protected ParticleSystem psExplosion;
 
+    protected virtual void Update()
+    {
+        /*
+         * Al declarar un método virtual (en cuyo caso ya no puede ser privado,
+         * estamos indicando que dicho método puede ser sobreescrito en las clases
+         * hijas, por lo que podremos 'pisar' su funcionalidad o completarla mediante
+         * llamadas al mismo método de la clase padre (referencia a base)
+         */
+
+        /*
+        print("UPDATE DEL ENEMIGO");
+        */
+    }
+
     public void RecibirDanyo(int danyo) {
         Debug.Log("RECIBIENDO DAÑO");
         vida = vida - danyo;
@@ -44,12 +58,5 @@ public class Enemigo : MonoBehaviour {
 
         return 0;
     }
-
-    /*
-    private void OnMouseDown() {
-        Debug.Log("PULSADO CON EL RATON");
-        RecibirDanyo(10);
-    }
-    */
 
 }

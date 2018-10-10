@@ -11,7 +11,7 @@ public class Disparo : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        if (Input.GetMouseButtonDown(0))
         {
             print("DISPARA");
             GameObject nuevaBala = Instantiate(prefabBala, transform.position, transform.rotation);
