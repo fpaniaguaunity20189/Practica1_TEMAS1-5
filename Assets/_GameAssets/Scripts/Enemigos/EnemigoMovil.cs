@@ -31,10 +31,7 @@ public class EnemigoMovil : Enemigo {
         if (collision.gameObject.name == "Player")
         {
             collision.gameObject.GetComponent<Player>().RecibirDanyo(danyo);
-            estaVivo = false;
-            ParticleSystem ps = Instantiate(psExplosion, transform.position, Quaternion.identity);
-            ps.Play();
-            Destruir();
+            Morir();
         }
     }
 }

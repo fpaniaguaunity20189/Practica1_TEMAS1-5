@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 54919543410068660}
   m_Layer: 0
   m_Name: EnemigoTonto
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,7 +117,7 @@ MonoBehaviour:
   danyo: 2
   personaje: {fileID: 0}
   psExplosion: {fileID: 19814690, guid: cd4d7020429cde74db076ffa72495419, type: 2}
-  speed: 3
+  speed: 1
   inicioRotacion: 1
   tiempoEntreRotacion: 2
 --- !u!136 &136953487397098378

@@ -11,11 +11,11 @@ public class Disparo : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             print("DISPARA");
             GameObject nuevaBala = Instantiate(prefabBala, transform.position, transform.rotation);
-            nuevaBala.GetComponent<Rigidbody>().AddForce(Vector3.forward * 100);
+            nuevaBala.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 100);
         }
 		
 	}
