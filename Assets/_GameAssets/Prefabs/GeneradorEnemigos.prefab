@@ -51,6 +51,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e290225c43715e4abf8be3d55f1f38a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numEnemigosMaximo: 5
-  prefabEnemigo: {fileID: 1944941263556756, guid: 366df9dd189946f48b3ff75401754ec0,
+  numEnemigosMaximo: 3
+  prefabEnemigo: {fileID: 1536743406554686, guid: d907f5a9944946b40be41eee5cb91f94,
     type: 2}
