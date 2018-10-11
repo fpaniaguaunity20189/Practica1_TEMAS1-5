@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -179,6 +179,10 @@ Prefab:
     - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_UseHeadBob
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
@@ -330,10 +334,10 @@ MonoBehaviour:
   vidaActual: 100
   vidaMaxima: 100
   armas:
-  - {fileID: 1817648306}
-  - {fileID: 524899254}
-  - {fileID: 1561292298}
-  - {fileID: 1877110864}
+  - {fileID: 1817648308}
+  - {fileID: 524899259}
+  - {fileID: 1561292303}
+  - {fileID: 1877110869}
   tm: {fileID: 813913150}
 --- !u!1001 &507701377
 Prefab:
@@ -444,6 +448,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ae6b126c1d9adab459835f9a43302988, type: 2}
+      propertyPath: m_Name
+      value: ArmaLarga
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae6b126c1d9adab459835f9a43302988, type: 2}
   m_IsPrefabParent: 0
@@ -451,6 +459,24 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ae6b126c1d9adab459835f9a43302988, type: 2}
   m_PrefabInternal: {fileID: 524899252}
+--- !u!4 &524899255 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: ae6b126c1d9adab459835f9a43302988, type: 2}
+  m_PrefabInternal: {fileID: 524899252}
+--- !u!114 &524899259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 524899254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5d593f9ca9d8ee49bc45cd892e0cbf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puntoGeneracion: {fileID: 1711601246}
+  prefabBala: {fileID: 1337356639900426, guid: 81923b89107425a4e95ee93b9b5e58fc, type: 2}
+  potenciaDisparo: 200
 --- !u!1 &702098677
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,7 +577,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &813913149
 Transform:
   m_ObjectHideFlags: 0
@@ -809,7 +835,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1504696441}
-  - component: {fileID: 1504696442}
   m_Layer: 0
   m_Name: PuntoGeneracion
   m_TagString: Untagged
@@ -830,18 +855,6 @@ Transform:
   m_Father: {fileID: 10929214}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -19.769001, z: 0}
---- !u!114 &1504696442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1504696440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e87c925cbe5ecc24e819b6f613383bec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabBala: {fileID: 1337356639900426, guid: 6b7ce7db3303f434d817bb33057fc13f, type: 2}
 --- !u!1001 &1542566513
 Prefab:
   m_ObjectHideFlags: 0
@@ -947,7 +960,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 523d04f779eba724e83a3e6439ab644f, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 523d04f779eba724e83a3e6439ab644f, type: 2}
+      propertyPath: m_Name
+      value: RifleCorto
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 523d04f779eba724e83a3e6439ab644f, type: 2}
@@ -956,6 +973,20 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 523d04f779eba724e83a3e6439ab644f, type: 2}
   m_PrefabInternal: {fileID: 1561292296}
+--- !u!114 &1561292303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1561292298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5d593f9ca9d8ee49bc45cd892e0cbf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puntoGeneracion: {fileID: 0}
+  prefabBala: {fileID: 0}
+  potenciaDisparo: 100
 --- !u!1 &1571792284
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,6 +1065,34 @@ Terrain:
   m_BakeLightProbesForTrees: 1
   m_ScaleInLightmap: 0.0512
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+--- !u!1 &1711601246
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1711601247}
+  m_Layer: 0
+  m_Name: PuntoGeneracion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1711601247
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1711601246}
+  m_LocalRotation: {x: -0.000000020825468, y: 0.7071068, z: -0.000000058203707, w: 0.7071068}
+  m_LocalPosition: {x: 1.323, y: 0.031, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 524899255}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1731584338
 GameObject:
   m_ObjectHideFlags: 0
@@ -1303,6 +1362,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c2f14b638b3f8f8409dc1d950b065b8f, type: 2}
+      propertyPath: m_Name
+      value: ArmaCorta
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c2f14b638b3f8f8409dc1d950b065b8f, type: 2}
   m_IsPrefabParent: 0
@@ -1310,6 +1373,24 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: c2f14b638b3f8f8409dc1d950b065b8f, type: 2}
   m_PrefabInternal: {fileID: 1817648304}
+--- !u!4 &1817648307 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: c2f14b638b3f8f8409dc1d950b065b8f, type: 2}
+  m_PrefabInternal: {fileID: 1817648304}
+--- !u!114 &1817648308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1817648306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5d593f9ca9d8ee49bc45cd892e0cbf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puntoGeneracion: {fileID: 2039231853}
+  prefabBala: {fileID: 1337356639900426, guid: 6b7ce7db3303f434d817bb33057fc13f, type: 2}
+  potenciaDisparo: 100
 --- !u!1001 &1877110862
 Prefab:
   m_ObjectHideFlags: 0
@@ -1363,7 +1444,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 7821151e4f2e4fb4d97fe7563c1b78bb, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7821151e4f2e4fb4d97fe7563c1b78bb, type: 2}
+      propertyPath: m_Name
+      value: RifleLargo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7821151e4f2e4fb4d97fe7563c1b78bb, type: 2}
@@ -1372,6 +1457,20 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 7821151e4f2e4fb4d97fe7563c1b78bb, type: 2}
   m_PrefabInternal: {fileID: 1877110862}
+--- !u!114 &1877110869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1877110864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5d593f9ca9d8ee49bc45cd892e0cbf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puntoGeneracion: {fileID: 0}
+  prefabBala: {fileID: 0}
+  potenciaDisparo: 100
 --- !u!4 &1970905993 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: c91c1eb85782d5748ace27eb4d7415bb, type: 3}
@@ -1434,3 +1533,31 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2039231853
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2039231854}
+  m_Layer: 0
+  m_Name: PuntoGeneracion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2039231854
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2039231853}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.994, y: 0.052, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1817648307}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}

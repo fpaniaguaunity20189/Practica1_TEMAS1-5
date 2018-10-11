@@ -28,6 +28,7 @@ public class EnemigoMovil : Enemigo {
         Debug.Log("UPDATE DE ENEMIGO MOVIL");
         base.Update();
         */
+        Avanzar();
     }
 
     protected void Avanzar() {

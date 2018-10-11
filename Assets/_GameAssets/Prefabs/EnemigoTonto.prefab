@@ -117,9 +117,9 @@ MonoBehaviour:
   danyo: 2
   personaje: {fileID: 0}
   psExplosion: {fileID: 19814690, guid: cd4d7020429cde74db076ffa72495419, type: 2}
-  speed: 1
+  speed: 3
   inicioRotacion: 1
-  tiempoEntreRotacion: 2
+  tiempoEntreRotacion: 3
 --- !u!136 &136953487397098378
 CapsuleCollider:
   m_ObjectHideFlags: 1

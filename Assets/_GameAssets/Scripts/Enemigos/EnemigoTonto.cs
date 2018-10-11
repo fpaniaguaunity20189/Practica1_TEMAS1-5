@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemigoTonto : EnemigoMovil {
-	protected override void Update ()
+    /*
+    protected override void Update ()
     {
+    */
         /*
          * El modificador 'override' indica que el método sobreescribe a un método
          * equivalente que se encuentra en la clase padre y está declarado como
@@ -17,6 +19,7 @@ public class EnemigoTonto : EnemigoMovil {
         Debug.Log("UPDATE DE ENEMIGO TONTO");
         base.Update();
         */
-        Avanzar();
+    /*
     }
+    */
 }

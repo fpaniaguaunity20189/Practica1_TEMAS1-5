@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CajaDeSalud : MonoBehaviour {
     [SerializeField] int speedRotation = 1;
+    [SerializeField] int vida = 1;
     int rotacion = 0;
 
     bool subiendo = true;
@@ -25,4 +26,12 @@ public class CajaDeSalud : MonoBehaviour {
             subiendo = true;
         }
 	}
+
+    private void OnTriggerEnter(Collider other) {
+        if (other.gameObject.CompareTag("Player")) {
+            Player p = other.gameObject.GetComponent<Player>();
+            p.IncrementarVida(vida);
+            Destroy(this.gameObject);
+        }
+    }
 }
