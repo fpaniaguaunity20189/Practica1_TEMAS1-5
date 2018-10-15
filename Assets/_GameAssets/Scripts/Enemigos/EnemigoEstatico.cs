@@ -2,15 +2,46 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemigoEstatico : MonoBehaviour {
+public class EnemigoEstatico : Enemigo {
+    [SerializeField] float distanciaAtaque = 5;
+    [SerializeField] GameObject prefabProyectil;
+    [SerializeField] Transform posGeneracion;
+    [SerializeField] int potenciaDisparo;
+    [SerializeField] float tiempoEntreDisparos = 2;
+    float tiempoAtaque;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private void Start() {
+        tiempoAtaque = tiempoEntreDisparos;
+    }
+
+    private void IntentoAtaque() {
+        tiempoAtaque += Time.deltaTime;//tiempoAtaque = tiempoAtaque + Time.deltaTime;
+        if (tiempoAtaque >= tiempoEntreDisparos) {
+            tiempoAtaque = 0;
+            //Generar disparo y lanzar
+            Disparar();
+        }
+    }
+
+    private void Disparar() {
+        GameObject proyectil = Instantiate(
+            prefabProyectil, 
+            posGeneracion.position, 
+            posGeneracion.rotation);
+        proyectil.GetComponent<Rigidbody>().AddRelativeForce(
+            Vector3.forward * potenciaDisparo);
+    }
+
+	protected override void Update () {
+        //Mira al player
+        transform.LookAt(player.transform.position);
+        //Obtiene el vector de distancia
+        Vector3 distancia = GetDistancia();
+        //Evalua si la distancia es menor que la distancia de ataque y ataca
+        if (distancia.sqrMagnitude < (distanciaAtaque * distanciaAtaque)) {
+            IntentoAtaque();
+        }
+    }
+
+
 }

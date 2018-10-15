@@ -12,11 +12,14 @@ public class Enemigo : MonoBehaviour {
     [SerializeField] int distanciaDeteccion = 5;
     [SerializeField] protected int danyo = 2;//Daño que infringe
 
-    [Header("REFERENCIAS")]
-    [SerializeField] protected GameObject personaje;
-
     [Header("FX")]
     [SerializeField] protected ParticleSystem psExplosion;
+
+    protected GameObject player;
+
+    private void Awake() {
+        player = GameObject.Find("Player");
+    }
 
     protected virtual void Update()
     {
@@ -49,14 +52,8 @@ public class Enemigo : MonoBehaviour {
         Destroy(this.gameObject);
     }
 
-    public void Atacar() {
-
-    }
-
-
-    public int DetectarDistanciaAlPersonaje() {
-
-        return 0;
+    protected Vector3 GetDistancia() {
+        return player.transform.position - transform.position;
     }
 
 }
