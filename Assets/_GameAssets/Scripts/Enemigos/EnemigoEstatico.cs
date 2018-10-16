@@ -34,7 +34,12 @@ public class EnemigoEstatico : Enemigo {
 
 	protected override void Update () {
         //Mira al player
-        transform.LookAt(player.transform.position);
+        Vector3 target = new Vector3(
+                player.transform.position.x,
+                transform.position.y,
+                player.transform.position.z
+            );
+        transform.LookAt(target);
         //Obtiene el vector de distancia
         Vector3 distancia = GetDistancia();
         //Evalua si la distancia es menor que la distancia de ataque y ataca

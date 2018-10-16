@@ -63,6 +63,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1904385752072368
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4326319643344188}
+  m_Layer: 0
+  m_Name: PuntoDisparo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &4113593418260074
 Transform:
   m_ObjectHideFlags: 1
@@ -91,6 +106,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4326319643344188
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1904385752072368}
+  m_LocalRotation: {x: -0.70710653, y: -0, z: -0, w: 0.7071071}
+  m_LocalPosition: {x: 0, y: 1.164, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4973448309954108}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 0}
 --- !u!4 &4973448309954108
 Transform:
   m_ObjectHideFlags: 1
@@ -100,7 +128,8 @@ Transform:
   m_LocalRotation: {x: 0.70710695, y: -0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: 0, y: 0.02, z: 0.96}
   m_LocalScale: {x: 0.5007713, y: 1.7422621, z: 0.5381571}
-  m_Children: []
+  m_Children:
+  - {fileID: 4326319643344188}
   m_Father: {fileID: 4113593418260074}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 0}
@@ -197,6 +226,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502ff3b49fec67443b05c32aa35dba38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  estaVivo: 1
+  vida: 10
+  distanciaDeteccion: 5
+  danyo: 2
+  psExplosion: {fileID: 0}
+  distanciaAtaque: 5
+  prefabProyectil: {fileID: 1337356639900426, guid: 6b7ce7db3303f434d817bb33057fc13f,
+    type: 2}
+  posGeneracion: {fileID: 4326319643344188}
+  potenciaDisparo: 200
+  tiempoEntreDisparos: 2
 --- !u!136 &136201566295556046
 CapsuleCollider:
   m_ObjectHideFlags: 1
