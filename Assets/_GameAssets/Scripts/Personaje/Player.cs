@@ -10,6 +10,7 @@ public class Player : MonoBehaviour {
     [SerializeField] private int vidaMaxima;
     [SerializeField] Arma[] armas = new Arma[NUM_ARMAS];
     [SerializeField] TextMesh tm;
+    [SerializeField] HUDScript hs;
     private void Start() {
         ActivarArma(armaActiva);
     }
@@ -21,12 +22,15 @@ public class Player : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Alpha1)) {
             armaActiva = 0;
             ActivarArma(armaActiva);
+            hs.ActivarArma(0);
         } else if (Input.GetKeyDown(KeyCode.Alpha2)) {
             armaActiva = 1;
             ActivarArma(armaActiva);
+            hs.ActivarArma(1);
         } else if (Input.GetKeyDown(KeyCode.Alpha3)) {
             armaActiva = 2;
             ActivarArma(armaActiva);
+            hs.ActivarArma(2);
         } else if (Input.GetKeyDown(KeyCode.Alpha4)) {
             armaActiva = 3;
             ActivarArma(armaActiva);
